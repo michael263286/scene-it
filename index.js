@@ -7,16 +7,15 @@
 
 /**
  * Take an array of movies and turn it into a string of HTML
- * @param {array} movieArray the movie array to convert into HTML
- * @returns {string} the HTML string
+ * @param {array} movies the movie array to convert into HTML
  */
-function renderMovies(movieArray) {
-  // 1. map over the movieArray
+function renderMovies(movies) {
+  // map over the movieArray
   // map takes a function, which is given one item at a time. In this instance,
   // the "one item" is an object containing movie data. map will return a new
   // array with the result of the function. Here, we are returning a string of
   // HTML, so that is what ends up in the `movieHtmlArray` variable.
-  const movieHtmlArray = movieArray.map(currentMovie => {
+  const movieHtmlArray = movies.map(currentMovie => {
     return `
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card mb-3">
@@ -30,9 +29,12 @@ function renderMovies(movieArray) {
     </div>`
   })
 
+  // find the movies container in the DOM
+  const moviesContainer = document.querySelector('#movies-container');
+
   // since movieHtmlArray is an array, and we want a string, we join all the 
   // items in the array together using an empty string as the separator.
-  return movieHtmlArray.join('')
+  moviesContainer.innerHTML = movieHtmlArray.join('')
 }
 
 /*
@@ -45,17 +47,15 @@ function renderMovies(movieArray) {
 // Add an event listener that will run once the document has finished loading
 // This is where the app functionality code starts
 document.addEventListener('DOMContentLoaded', function() {
-  // find the movies container in the DOM
-  const moviesContainer = document.querySelector('#movies-container');
   // find the search form in the DOM
   const searchForm = document.querySelector('#search-form');
   // add an event listener to the submit event of the searchForm
   searchForm.addEventListener('submit', function(e) {
     // prevent the form from doing the default behavior (send and refresh page)
     e.preventDefault();
-    // show the movies on the page by setting the contents of the innerHTML to
-    // the result of the renderMovies function. We are giving it the movieData
-    // variable (from data.js), so that is what the fn uses to create the HTML
-    moviesContainer.innerHTML = renderMovies(movieData);
+    // show the movies on the page by calling the renderMovies function. We are
+    // giving it the movieData variable (from data.js), so that is what the
+    // function uses to create the HTML
+    renderMovies(movieData);
   });
 })
