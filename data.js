@@ -1,82 +1,83 @@
 var movieData = [
 	{
-		Title: "The Dark Knight",
+		Title: "Everything Everywhere All At Once",
+		Year: "2022",
+		imdbID: "tt6710474",
+		Type: "movie",
+		Poster:
+			"https://d135u4jtzauizi.cloudfront.net/EEAAOPayoff.jpg"
+		
+	},
+	{
+		Title: "The Curious Case Of Benjamin Button",
 		Year: "2008",
-		imdbID: "tt0468569",
+		imdbID: "tt0421715",
 		Type: "movie",
 		Poster:
-			"https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+			"https://flxt.tmsimg.com/assets/p170920_p_v8_am.jpg"
 	},
 	{
-		Title: "The Dark Knight Rises",
-		Year: "2012",
-		imdbID: "tt1345836",
+		Title: "Avengers Endgame",
+		Year: "2019",
+		imdbID: "tt4154796",
 		Type: "movie",
 		Poster:
-			"https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg"
+			"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"
 	},
 	{
-		Title: "Thor: The Dark World",
-		Year: "2013",
-		imdbID: "tt1981115",
-		Type: "movie",
-		Poster:
-			"https://ia.media-imdb.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SX300.jpg"
-	},
-	{
-		Title: "Transformers: Dark of the Moon",
-		Year: "2011",
+		Title: "Coda",
+		Year: "2021",
 		imdbID: "tt1399103",
 		Type: "movie",
 		Poster:
-			"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwOTY0MTc1NV5BMl5BanBnXkFtZTcwMDQwNjA2NQ@@._V1_SX300.jpg"
+			"https://m.media-amazon.com/images/M/MV5BYzkyNzNiMDItMGU1Yy00NmEyLWE4N2ItMjkzMDZmMmVhNDU4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
 	},
 	{
-		Title: "Zero Dark Thirty",
-		Year: "2012",
-		imdbID: "tt1790885",
+		Title: "Superbad",
+		Year: "2007",
+		imdbID: "tt0829482",
 		Type: "movie",
 		Poster:
-			"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4OTUyNzcwN15BMl5BanBnXkFtZTcwMTQ1NDE3OA@@._V1_SX300.jpg"
+			"https://pics.filmaffinity.com/Superbad-743461969-large.jpg"
 	},
 	{
-		Title: "Dark Shadows",
-		Year: "2012",
-		imdbID: "tt1077368",
+		Title: "Holes",
+		Year: "2003",
+		imdbID: "tt0311289",
 		Type: "movie",
 		Poster:
-			"https://images-na.ssl-images-amazon.com/images/M/MV5BMjc0NzAyMzI1MF5BMl5BanBnXkFtZTcwMTE0NDQ1Nw@@._V1_SX300.jpg"
+			"https://lumiere-a.akamaihd.net/v1/images/p_holes_19755_8f3e1618.jpeg"
 	},
 	{
-		Title: "Dark City",
-		Year: "1998",
-		imdbID: "tt0118929",
+		Title: "As Above So Below",
+		Year: "2014",
+		imdbID: "tt2870612",
 		Type: "movie",
 		Poster:
-			"https://ia.media-imdb.com/images/M/MV5BMGExOGExM2UtNWM5ZS00OWEzLTllNzYtM2NlMTJlYjBlZTJkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+			"https://flxt.tmsimg.com/assets/p10542704_p_v8_ah.jpg"
 	},
 	{
-		Title: "Dancer in the Dark",
-		Year: "2000",
-		imdbID: "tt0168629",
+		Title: "Good Will Hunting",
+		Year: "1997",
+		imdbID: "tt0119217",
 		Type: "movie",
 		Poster:
-			"https://images-na.ssl-images-amazon.com/images/M/MV5BNDVkYWMxNWEtNjc2MC00OGI5LWI3NmUtYWUwNDQyOTc3YmY5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+			"https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
 	},
 	{
-		Title: "The Dark Tower",
-		Year: "2017",
-		imdbID: "tt1648190",
+		Title: "Harry Potter and the Sorcerer's Stone",
+		Year: "2001",
+		imdbID: "tt0241527",
 		Type: "movie",
 		Poster:
-			"https://ia.media-imdb.com/images/M/MV5BMTU3MjUwMzQ3MF5BMl5BanBnXkFtZTgwMjcwNjkxMjI@._V1_SX300.jpg"
+			"https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg"
 	},
 	{
-		Title: "Dark Skies",
-		Year: "2013",
-		imdbID: "tt2387433",
+		Title: "The Matrix",
+		Year: "1999",
+		imdbID: "tt0133093",
 		Type: "movie",
 		Poster:
-			"https://ia.media-imdb.com/images/M/MV5BMTcxNDE1OTgyOF5BMl5BanBnXkFtZTcwMTEyMzMxOQ@@._V1_SX300.jpg"
+			"https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg"
 	}
 ];
