@@ -5,7 +5,7 @@ function renderMovies(movies){
     <div class="card-body">
       <p class="card-text">${currentMovie.Title}</p>
       <p class="card-text">${currentMovie.Year}</p>
-      <a href="#" class="btn btn-primary add-button data-imdbid" onclick="saveToWatchlist('${currentMovie.imdbID}')">Add</a>
+      <button class="btn btn-primary add-button data-imdbid" onclick="saveToWatchlist('${currentMovie.imdbID}')">Add</button>
     </div> 
   </div>`
   })
@@ -16,11 +16,13 @@ function renderMovies(movies){
 }
 
 document.addEventListener('click', function(event){
-  const addButton = document.querySelector('.add-button')
-  if(event.target.contains(addButton)){
+  const addButton = event.target
+  if(event.target.classList.contains(addButton)){
     const movieID = event.target.dataset.imdbid
+    saveToWatchlist(movieID)
   }
 })
+
 function saveToWatchlist(movieID){
   console.log(movieID)
   const movie = movieData.find(function(currentMovie){
@@ -33,7 +35,7 @@ function saveToWatchlist(movieID){
   }
   watchlist.push(movie)
   watchlistJSON = JSON.stringify(watchlist)
-  localStorage.setItem('watchlist')
+  localStorage.setItem('watchlist',watchlistJSON)
   
 }
 

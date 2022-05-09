@@ -1,13 +1,45 @@
 body {
-	background-color: #B2E9FD;
+	background-image: url(cinema.jpg);
+	background-size:cover;
 }
 
 .header h2 {
-	color: #DC4247;
+	color: white;
+	font-size: 100px;
+	font-style: italic;
 }
 
 .header p {
-	color: #50524F;
+	color: white;
+	font-family: 'DM Serif Text', serif;
+	font-size: 18px;
+}
+
+.btn-primary{
+	font-family: 'DM Serif Text', serif;
+	background-color:rgb(170, 167, 167);
 }
 
 
+
+
+.display-2{
+	font-family: 'DM Serif Text', serif;
+	color:black;
+}
+
+.card-text{
+	font-family: 'DM Serif Text', serif;
+	font-size:18px;
+	color:rgb(170, 167, 167);
+}
+
+
+.search-bar{
+	font-family: 'DM Serif Text', serif;
+}
+
+
+.card-body{
+	background-color:black;
+}
